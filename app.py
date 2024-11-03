@@ -4,14 +4,10 @@ from gradio_client import Client, file
 import tempfile
 import google.generativeai as genai
 
-from dotenv import load_dotenv
-import os
 
-# Load environment variables from .env file
-load_dotenv()
 
-# Access the API key
-api_key = os.getenv("GEMINI_API_KEY")
+# Configure the Gemini API with the API key from environment variables
+genai.configure(api_key=os.environ["API_KEY"])
 
 st.set_page_config(layout="wide")
 
