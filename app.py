@@ -5,7 +5,6 @@ import tempfile
 import google.generativeai as genai
 
 
-
 # Configure the Gemini API with the API key from environment variables
 genai.configure(api_key=os.environ["API_KEY"])
 
